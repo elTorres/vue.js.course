@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.5.9/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-once>{{title}}</h1>
+        <input type="text" v-on:input="changeTitle">
+        <p>{{getTitle()}} - <a v-bind:href="link">{{linkTitle}}</a></p>
+        <hr>
+        <p v-html="fullLink"></p>
+        <hr>
+        <button v-on:click="increaseCounter(2, $event)" title="El título" >Increase</button>
+        <p>{{counter}}</p>
+        <p v-on:mousemove="updateCoordinates">Mouse coordinates: {{x}}/{{y}}</p>
+    </div>  
+    <script src="app.js"></script>
+</body>
+</html>
