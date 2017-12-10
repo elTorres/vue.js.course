@@ -39,6 +39,7 @@ new Vue({
     startProgress: function () {
       var progressBarId;
       var vm = this;
+      this.progress = 0;
 
       progressBarId = setInterval(function () {
         if (vm.progress < 100) {
