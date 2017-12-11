@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-on:keyup="updateTitle($event)" v-on:keyup.enter.space="manageKeys()">
+            <p>{{title}}</p>
+            <hr>
+            <button v-on:click="increase(2, $event)">Incrementar</button>
+            <button v-on:click="counter += 2">Incrementar</button>
+            <button v-on:click="secondCounter++">Inc 2nd Counter</button>
+            <p>Counters: {{counter}} | {{secondCounter}}</p>
+            <p>Results: {{result()}} | {{output}}</p>
+            <p v-on:mousemove="updateCoordinates">
+                Coordinates {{x}}/{{y}}<br>
+                <span v-on:mousemove="stopPropagation">Aqui no se debe actualizar</span><br>
+                <span v-on:mousemove.stop="">Aqui tampoco se debe actualizar</span><br>
+            </p>
+        </div>
+    
+        <script src="app.js"></script>
+    </body>
+</html>
