@@ -1,15 +1,10 @@
 var App = new Vue({
     el: '#app',
     data: {
-        color: "gray",
-        width: 100
-    },
-    computed: {
-        myStyle: function() {
-            return {
-                backgroundColor: this.color,
-                width: this.width + 'px'
-            };
-        }
+        ingredients: ['meat','fruit', 'cookies'],
+        persons: [
+            {name: 'Max', age: 27, color: 'red'},
+            {name: 'Fernando', age: 'unknow', color: 'blue'}
+        ]
     }
 });
