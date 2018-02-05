@@ -11,9 +11,9 @@
 </head>
 <body>
     <div id="app1">
-        <h1>{{title}}</h1>
+        <h1 ref="mainTitle">{{title}}</h1>
         <h2>{{lowercaseTitle}}</h2>
-        <button v-on:click="show">Show Paragraph</button>
+        <button v-on:click="show" ref="myButton">Show Paragraph</button>
         <p v-if="showParagraph">This is not allways visible</p>
     </div>
  
