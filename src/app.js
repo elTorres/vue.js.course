@@ -1,9 +1,11 @@
+var data = {
+    title: 'The VueJS Instance',
+    showParagraph: false
+}
+
 var vm1 = new Vue({
     el: '#app1',
-    data: {
-        title: 'The VueJS Instance',
-        showParagraph: false
-    }, 
+    data: data, 
     methods: {
         show: function () {
             this.showParagraph = true;
@@ -24,6 +26,10 @@ var vm1 = new Vue({
         }
     }
 });
+
+console.log(" data === vm1.$data: ", data === vm1.$data);
+console.log("title: ", vm1.title);
+console.log("title: ", vm1.$data.title);
 
 var vm2 = new Vue({
     el: '#app2',
