@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>VueJS Course</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,26 +10,16 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="ingredient in ingredients">{{ingredient}}</li>
-        </ul>
-        <ul>
-            <li v-for="(ingredient, i) in ingredients">{{i}} - {{ingredient}}</li>
-        </ul>
-        <template v-for="(ingredient, index) in ingredients">
-            <h1>{{ingredient}}</h1>
-            <p>Index: {{index}}</p>
-        </template>
-        <hr>
-        <ul>
-            <li v-for="person in persons">
-                <div v-for="(value, key, index) in person">({{index}}) {{key}}: {{value}}</div>
-            </li>
-        </ul>
-        <span v-for="n in 10">{{n}}</span>
+    <div id="app1">
+        <h1>{{title}}</h1>
+        <h2>{{lowercaseTitle}}</h2>
+        <button v-on:click="show">Show Paragraph</button>
+        <p v-if="showParagraph">This is not allways visible</p>
     </div>
  
+    <div id="app2">
+        <h1>{{title}}</h1>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
