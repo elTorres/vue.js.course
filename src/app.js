@@ -4,7 +4,6 @@ var data = {
 }
 
 var vm1 = new Vue({
-    el: '#app1',
     data: data, 
     methods: {
         show: function () {
@@ -29,6 +28,7 @@ var vm1 = new Vue({
     }
 });
 
+vm1.$mount('#app1');
 console.log(" data === vm1.$data: ", data === vm1.$data);
 console.log("title: ", vm1.title);
 console.log("title: ", vm1.$data.title);
