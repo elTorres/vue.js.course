@@ -31,6 +31,10 @@ console.log(" data === vm1.$data: ", data === vm1.$data);
 console.log("title: ", vm1.title);
 console.log("title: ", vm1.$data.title);
 
+setTimeout(() => {
+   vm1.show();
+}, 3000);
+
 var vm2 = new Vue({
     el: '#app2',
     data: {
