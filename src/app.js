@@ -50,3 +50,14 @@ var vm2 = new Vue({
         }
     }
 });
+
+var vm3 = new Vue({
+    template: '<h1>Hello 1!!!</h1>'
+})
+var vm4 = new Vue({
+    template: '<h1>Hello 2!!!</h1>'
+})
+
+vm3.$mount('#app3');
+vm4.$mount();
+document.getElementById('app4').appendChild(vm4.$el);
