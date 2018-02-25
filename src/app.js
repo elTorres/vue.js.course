@@ -3,7 +3,12 @@ var data = {
     showParagraph: false
 }
 
+Vue.component('Hello', {
+    template: '<h1>Hello Template!</h1>'
+})
+
 var vm1 = new Vue({
+    el: "#app1",
     data: data, 
     methods: {
         show: function () {
@@ -23,21 +28,10 @@ var vm1 = new Vue({
     },
     watch: {
         title: function (value) {
-            alert('Title changed, new value: ' + value);
+            //alert('Title changed, new value: ' + value);
         }
     }
 });
-
-vm1.$mount('#app1');
-console.log(" data === vm1.$data: ", data === vm1.$data);
-console.log("title: ", vm1.title);
-console.log("title: ", vm1.$data.title);
-
-vm1.$refs.mainTitle.innerText = 'Title from $ref.innerText';
-
-setTimeout(() => {
-   vm1.show();
-}, 3000);
 
 var vm2 = new Vue({
     el: '#app2',
@@ -50,14 +44,3 @@ var vm2 = new Vue({
         }
     }
 });
-
-var vm3 = new Vue({
-    template: '<h1>Hello 1!!!</h1>'
-})
-var vm4 = new Vue({
-    template: '<h1>Hello 2!!!</h1>'
-})
-
-vm3.$mount('#app3');
-vm4.$mount();
-document.getElementById('app4').appendChild(vm4.$el);
