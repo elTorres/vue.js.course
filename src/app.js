@@ -44,3 +44,11 @@ var vm2 = new Vue({
         }
     }
 });
+
+var vm3 = new Vue({
+    data: data,
+    template: '<h1>Hello from template! {{title}}</h1>'
+});
+
+vm3.$mount();
+document.getElementById('app3').appendChild(vm3.$el);
