@@ -1,15 +1,8 @@
 <template>
-<h1>{{ greeting}} World!!</h1>
+  <app-servers></app-servers>
 </template>
 
 <script>
-export default {
-  data: function () {
-    return {
-      greeting: 'Hellooooooo'
-    }
-  }
-}
 </script>
 
 <style>
