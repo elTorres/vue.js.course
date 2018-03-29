@@ -2,7 +2,8 @@
     <div class="component">
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
-        <p>My name is {{switchName()}} / {{objeto.name}}</p>
+        <p>User name: {{switchName()}} / {{objeto.name}}</p>
+        <p>User age: {{userAge}}</p>
         <button @click="resetName()">Reset name</button>
         <button @click="resetFn()">Reset name from parent</button>
     </div>
@@ -19,7 +20,8 @@
             objeto: {
                 type: Object
             },
-            resetFn: Function
+            resetFn: Function,
+            userAge: Number
         },
         methods: {
             switchName() {
