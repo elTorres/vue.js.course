@@ -6,7 +6,9 @@
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :name="name" :objeto="objeto" @nameChanged="name = $event"></app-user-detail>
+                <app-user-detail :name="name" :objeto="objeto" :resetFn="resetName"
+                    @nameChanged="name = $event" >
+                </app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -31,6 +33,10 @@
         methods: {
             changeName() {
                 this.name = 'Petri'
+                this.objeto.name = this.name;
+            },
+            resetName() {
+                this.name = 'reset from Parent'
                 this.objeto.name = this.name;
             }
         },
