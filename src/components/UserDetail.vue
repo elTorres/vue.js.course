@@ -9,7 +9,19 @@
 <script>
     export default {
         props: {
-            name: [String, Array]
+            name: {
+                /*
+                type: Object,
+                default: function() {
+                    return {
+                        name: 'Manuela'
+                    }
+                },
+                */
+                type: String,
+                //required: true,
+                default: 'Pablo'
+            }
         },
         methods: {
             switchName() {
