@@ -1,12 +1,12 @@
 <template>
     <div class="component">
         <h1>The User Component</h1>
-        <p>I'm an awesome User!</p>
+        <p>I'm an awesome User! My name is {{name}} / {{objeto.name}}</p>
         <button @click="changeName">Change name</button>
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail v-bind:name="name"></app-user-detail>
+                <app-user-detail :name="name" :objeto="objeto"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -22,12 +22,16 @@
     export default {
         data: function() {
             return {
-                name: 'Fernando'
+                name: 'Fernando',
+                objeto: {
+                    name: 'Fernando'
+                }
             }
         },
         methods: {
             changeName() {
-                this.name = 1
+                this.name = 'Petri'
+                this.objeto.name = this.name;
             }
         },
         components: {
