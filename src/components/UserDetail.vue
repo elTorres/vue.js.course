@@ -25,7 +25,7 @@
             },
             resetName() {
                 this.objeto.name = "Obelix";
-                this.name = this.objeto.name
+                this.$emit('nameChanged', this.objeto.name);
             }
         }
     }
